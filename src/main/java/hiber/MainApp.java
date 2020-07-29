@@ -38,11 +38,11 @@ public class MainApp {
             System.out.println("Email = " + user.getEmail());
             System.out.println();
 
-           // if (user.getCar() != null) {
-               // user = userService.getUserByCar(user.getCar());
-            User user1 = userService.getUserByCar(car1);
+          //  if (user.getCar() != null) {
+              //  user = userService.getUserByCar(user.getCar());
+                     User user1 = userService.getUserByCar(car1);
                 System.out.println("getUserByCar: " + user1);
-
+           // }
         }
 
       /*  User user = new User();

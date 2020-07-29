@@ -34,11 +34,15 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public User getUserByCar(Car car) {
-        Query query = sessionFactory.getCurrentSession().createQuery("from User where car=:car")
-                .setParameter("car", car)
-                .setMaxResults(1);
+        String hql ="select * FROM User WHERE car=:car";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql).setParameter("car",car);
+       // Query query = sessionFactory.getCurrentSession().createQuery("from User where car=:car").setParameter("car", car).setMaxResults(1);
         return (User) query.getSingleResult();
     }
-
+/*
+ String hql = "select f FROM Family f  WHERE (:person in elements(f.children))";
+ Query query = session.createQuery(hql);
+ query.setEntity("person",somePersonObject);
+ */
 
 }
