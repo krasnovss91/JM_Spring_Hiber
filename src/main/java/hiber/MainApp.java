@@ -41,7 +41,7 @@ public class MainApp {
           //  if (user.getCar() != null) {
               //  user = userService.getUserByCar(user.getCar());
                      User user1 = userService.getUserByCar(car1);
-                System.out.println("getUserByCar: " + user1.getFirstName()+ " " + user1.getLastName()+" "+user1.getEmail()+" "+user1.getCar());
+                System.out.println("getUserByCar: " + user1.getFirstName()+ " " + user1.getLastName()+" "+user1.getEmail()+" "+user1.getCar().getName()+" "+user1.getCar().getSeries());
            // }
         }
 
